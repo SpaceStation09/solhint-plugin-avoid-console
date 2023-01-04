@@ -1,0 +1,25 @@
+{
+  "name": "solhint-plugin-ban-console",
+  "version": "0.1.0",
+  "description": "A solhint plugin to check the existence of console statements.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpaceStation09/solhint-plugin-ban-console.git"
+  },
+  "keywords": [
+    "solhint",
+    "solidity",
+    "plugin"
+  ],
+  "author": "SpaceStation09",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpaceStation09/solhint-plugin-ban-console/issues"
+  },
+  "homepage": "https://github.com/SpaceStation09/solhint-plugin-ban-console#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "solhint": "^3.3.7"
+  }
+}
