@@ -1,6 +1,6 @@
 {
-  "name": "solhint-plugin-ban-console",
-  "version": "0.1.0",
+  "name": "solhint-plugin-avoid-console",
+  "version": "1.0.0",
   "description": "A solhint plugin to check the existence of console statements.",
   "main": "index.js",
   "repository": {
