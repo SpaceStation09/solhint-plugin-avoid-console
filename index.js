@@ -3,7 +3,7 @@ const lodash = require("lodash");
 
 const ruleId = "no-console-log";
 const meta = {
-  type: "best-practices",
+  type: "best-practises",
   docs: {
     description: "Check if there exists any console.log or hardhat/console.sol statements",
     category: "Best Practice Rules",
@@ -37,8 +37,8 @@ class NoConsoleLog extends BaseChecker {
     for (const len of lodash.range(1,33)) {
       logStatements.push(`logBytes${len}`);
     }
-    return (node.expression.expression.name === "console") && (logStatements.includes(node.expression.expression.memberName))
-  } 
+    return (node.expression.expression.name === "console") && (logStatements.includes(node.expression.memberName))
+  }
 
   ImportDirective(node) {
     if (this.isHardHatConsoleImport(node)) {
@@ -48,9 +48,9 @@ class NoConsoleLog extends BaseChecker {
 
   FunctionCall(node) {
     if(this.isConsoleLog(node)) {
-      this.error(node, "Console statement is not allowed.")
+      this.error(node, `Console statement console.${node.expression.memberName}() is not allowed in production.`)
     }
   }
 }
 
-module.exports = NoConsoleLog;
+module.exports = [NoConsoleLog];
